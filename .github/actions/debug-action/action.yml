@@ -1,6 +1,10 @@
 name: "debug-action"
 description: "Outputs debug information"
 author: "jeffrafter"
+inputs:
+  amazing-creature:
+    description: What kind of amazing creature are you?
+    default: person
 runs:
   using: "node12"
   main: "./debug.js"
