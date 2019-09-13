@@ -5,6 +5,9 @@ inputs:
   amazing-creature:
     description: What kind of amazing creature are you?
     default: person
+outputs:
+  amazing-message:
+    description: We said something nice, this was what we said.
 runs:
   using: "node12"
   main: "./debug.js"
