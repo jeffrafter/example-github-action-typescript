@@ -1,0 +1,10 @@
+name: "thanks-action"
+description: "Says thanks when a contributor opens an issue"
+author: "jeffrafter"
+runs:
+  using: "node12"
+  main: "./thanks.js"
+inputs:
+  thanks-message:
+    description: Say thanks
+    default: Thanks for opening an issue ❤!

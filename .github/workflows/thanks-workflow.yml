@@ -1,0 +1,17 @@
+name: Thanks workflow
+on: [issues]
+
+jobs:
+  build:
+    name: Thanks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: npm install
+      - run: npm run build
+      - uses: ./.github/actions/thanks-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: thanks
