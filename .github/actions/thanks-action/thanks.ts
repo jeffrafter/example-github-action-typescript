@@ -10,7 +10,7 @@ const run = async (): Promise<void> => {
     const issue = github.context.payload.issue
     if (!issue) return
 
-    const token = process.env['GITHUB_TOKEN']
+    const token = process.env['THANKS_USER_TOKEN'] || process.env['GITHUB_TOKEN']
     if (!token) return
 
     // Create the octokit client
